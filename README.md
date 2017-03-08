@@ -1,7 +1,9 @@
 # pgmon
 
+
 Example
 
+```
 $ ./pgmon.sh kyle kyle  mymachine.com
 
   psql -t -h mymachine.com -p 5432 -U kyle postgres < /tmp/MONITOR/tmp/mymachine.com:postgres_collect.pipe &
@@ -32,3 +34,4 @@ $ ./pgmon.sh kyle kyle  mymachine.com
   16 |    73695 |         0 |      1001290 |       35585 |         1806 |        1721 |        1915
   14 |    65117 |         0 |       242383 |       22150 |          420 |         530 |         511
    4 |   111906 |         0 |      1593090 |       49570 |         2982 |        4718 |        3086
+```
