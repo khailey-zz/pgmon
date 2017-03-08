@@ -21,8 +21,6 @@ function usage
        exit
 }
 
-echo "$# =" $#
-
 [[ $# -lt 3 ]] && usage
 
 [[ $# -gt 0 ]] && UN=$1
@@ -383,8 +381,8 @@ EOF
 function setup_sql 
 {
   cat << EOF
-       SET client_min_messages TO WARNING;
      \o  /dev/null
+       SET client_min_messages TO WARNING;
        create temp table vars (nm varchar(30), value bigint);
        insert into vars select 'blks_hit', sum(blks_hit) from  pg_stat_database; 
        insert into vars select 'blks_read', sum(blks_read) from  pg_stat_database; 
