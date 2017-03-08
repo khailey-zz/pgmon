@@ -3,6 +3,7 @@
 
 Example
 
+```
 $ ./pgmon.sh kyle kyle  mymachine.com
 
   psql -t -h mymachine.com -p 5432 -U kyle postgres < /tmp/MONITOR/tmp/mymachine.com:postgres_collect.pipe &
@@ -35,3 +36,4 @@ $ ./pgmon.sh kyle kyle  mymachine.com
    4 |   111906 |         0 |      1593090 |       49570 |         2982 |        4718 |        3086 
 
 
+```
