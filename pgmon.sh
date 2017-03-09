@@ -2,7 +2,7 @@
 
 UN=kyle
 PW=kyle
-HOST=mymachine.us-east-1-beta.rds.amazonaws.com
+HOST=mymachine.com
 
 SID=postgres
 
