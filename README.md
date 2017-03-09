@@ -16,7 +16,6 @@ $ ./pgmon.sh kyle kyle  mymachine.com
 
   Connected, starting collect at Wed Mar 8 12:05:12 PST 2017
   starting stats collecting
-  SET
 
   AAS| blks_hit | blks_read | tup_returned | tup_fetched | tup_inserted | tup_updated | tup_deleted  
 
