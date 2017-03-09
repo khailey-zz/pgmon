@@ -11,7 +11,7 @@ $ ./pgmon.sh kyle kyle  mymachine.com
   RUN_TIME=-1
   COLLECT_LIST=
   FAST_SAMPLE=wts
-  TARGET=kr4.c3o7fyskibto.us-east-1-beta.rds.amazonaws.com:postgres
+  TARGET=mymachine.com:postgres
   DEBUG=0
 
   Connected, starting collect at Wed Mar 8 12:05:12 PST 2017
