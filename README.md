@@ -59,27 +59,28 @@ $ ./pgaas.sh kyle kyle  mymachine.com
   Connected, starting collect at Wed Mar 8 12:05:12 PST 2017
   starting stats collecting
 
-   22:24:57| 18500 | rdsadmin |            |                 |                | autovacuum: VACUUM ANALYZE public.claim3
-  22:24:57| 17797 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
-  22:24:57| 17799 | Axistech |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +         
+  22:24:57| 18500 | rdsadmin |            |                 |                | autovacuum: VACUUM ANALYZE public.claim3
+  22:24:57| 17797 | kylelf   |172.30.0.73 | Lsn             | durable        | COMMIT
+  22:24:57| 17799 | kylelf   |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +
           |       |          |            |                 |                | SET "member_first_nm" = $1              +         
           |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
-  22:24:57| 17801 | Axistech |172.30.0.73 | LWLockTranche   | buffer_content | UPDATE "public"."claim4"                +         
+  22:24:57| 17801 | kylelf   |172.30.0.73 | LWLockTranche   | buffer_content | UPDATE "public"."claim4"                +
           |       |          |            |                 |                | SET "member_first_nm" = $1              +         
           |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
-  22:24:57| 17802 | Axistech |172.30.0.73 | LWLockTranche   | buffer_content | UPDATE "public"."claim4"                +         
+  22:24:57| 17802 | kylelf   |172.30.0.73 | LWLockTranche   | buffer_content | UPDATE "public"."claim4"                +
           |       |          |            |                 |                | SET "member_first_nm" = $1              +         
           |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
-  22:24:57| 17803 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
-  22:24:57| 17804 | Axistech |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +         
+  22:24:57| 17803 | kylelf   |172.30.0.73 | Lsn             | durable        | COMMIT
+  22:24:57| 17804 | kylelf   |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +         
           |       |          |            |                 |                | SET "member_first_nm" = $1              +         
           |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
-  22:24:57| 17805 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
-  22:24:57| 17806 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
-  22:24:57| 17798 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
-  22:24:57| 17800 | Axistech |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +         
+  22:24:57| 17805 | kylelf   |172.30.0.73 | Lsn             | durable        | COMMIT  
+  22:24:57| 17806 | kylelf   |172.30.0.73 | Lsn             | durable        | COMMIT  
+  22:24:57| 17798 | kylelf   |172.30.0.73 | Lsn             | durable        | COMMIT  
+  22:24:57| 17800 | kylelf   |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +         
           |       |          |            |                 |                | SET "member_first_nm" = $1              +         
           |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
+
 
  total | empty | lsn:durable | transactionid | tuple | lock_manager | extend | buffer_content | buffer_mapping | ProcArrayLock
     11 |     4 |           5 |             0 |     0 |            0 |      0 |              2 |              0 |             0 
