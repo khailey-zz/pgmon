@@ -1,9 +1,8 @@
 
 
 UN=kylelf
-PW=kylelf17
-HOST=kylelf2.c3o7fyskibto.us-east-1-beta.rds.amazonaws.com
-HOST=kr4.c3o7fyskibto.us-east-1-beta.rds.amazonaws.com
+PW=kylelf
+HOST=mymachine.com
 SID=kylelf
 PORT=5432 
 
