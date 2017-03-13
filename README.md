@@ -36,3 +36,53 @@ $ ./pgmon.sh kyle kyle  mymachine.com
 
 
 ```
+
+# pgaas.sh
+ 
+ every second (or so) outputs 2 things
+ list of active sessions 
+ count of different wait events
+
+Example
+
+```
+$ ./pgaas.sh kyle kyle  mymachine.com
+
+  psql -t -h mymachine.com -p 5432 -U kyle postgres < /tmp/MONITOR/tmp/mymachine.com:postgres_collect.pipe &
+
+  RUN_TIME=-1
+  COLLECT_LIST=
+  FAST_SAMPLE=wts
+  TARGET=mymachine.com:postgres
+  DEBUG=0
+
+  Connected, starting collect at Wed Mar 8 12:05:12 PST 2017
+  starting stats collecting
+
+   22:24:57| 18500 | rdsadmin |            |                 |                | autovacuum: VACUUM ANALYZE public.claim3
+  22:24:57| 17797 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
+  22:24:57| 17799 | Axistech |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +         
+          |       |          |            |                 |                | SET "member_first_nm" = $1              +         
+          |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
+  22:24:57| 17801 | Axistech |172.30.0.73 | LWLockTranche   | buffer_content | UPDATE "public"."claim4"                +         
+          |       |          |            |                 |                | SET "member_first_nm" = $1              +         
+          |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
+  22:24:57| 17802 | Axistech |172.30.0.73 | LWLockTranche   | buffer_content | UPDATE "public"."claim4"                +         
+          |       |          |            |                 |                | SET "member_first_nm" = $1              +         
+          |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
+  22:24:57| 17803 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
+  22:24:57| 17804 | Axistech |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +         
+          |       |          |            |                 |                | SET "member_first_nm" = $1              +         
+          |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
+  22:24:57| 17805 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
+  22:24:57| 17806 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
+  22:24:57| 17798 | Axistech |172.30.0.73 | Lsn             | durable        | COMMIT  
+  22:24:57| 17800 | Axistech |172.30.0.73 |                 |                | UPDATE "public"."claim4"                +         
+          |       |          |            |                 |                | SET "member_first_nm" = $1              +         
+          |       |          |            |                 |                | WHERE  ( ( "DMS_ROW_ID" = $2  ) ) 
+
+ total | empty | lsn:durable | transactionid | tuple | lock_manager | extend | buffer_content | buffer_mapping | ProcArrayLock
+    11 |     4 |           5 |             0 |     0 |            0 |      0 |              2 |              0 |             0 
+
+
+```
