@@ -1,4 +1,4 @@
-# pgmon
+# pgmon.sh
  
 
 Example
