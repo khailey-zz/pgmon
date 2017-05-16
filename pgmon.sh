@@ -334,7 +334,7 @@ function wts
      UPDATE vars SET value = ( select sum(pg_stat_database.tup_deleted) from pg_stat_database) where nm='tup_deleted';
      UPDATE vars SET value = ( select sum(pg_stat_all_tables.n_tup_del) from pg_stat_all_tables) where nm='n_tup_del';
      UPDATE vars SET value = ( select sum(heap_blks_read) from pg_statio_all_tables) where nm='heap_blks_read';
-     UPDATE vars SET value = ( select count(*) from pg_stat_activity where state not like 'idle%' )  where nm='AAS';
+     UPDATE vars SET value = ( select count(*) from pg_stat_activity where state not like 'idle%' and pid !=  pg_backend_pid() )  where nm='AAS';
      \o 
 EOF
 }
